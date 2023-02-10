@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Saira Stencil One';
+    src: url('SairaStencilOne-Regular.eot');
+    src: local('Saira Stencil One Regular'), local('SairaStencilOne-Regular'),
+        url('SairaStencilOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SairaStencilOne-Regular.woff2') format('woff2'),
+        url('SairaStencilOne-Regular.woff') format('woff'),
+        url('SairaStencilOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
