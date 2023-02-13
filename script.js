@@ -65,7 +65,7 @@ const swiper = new Swiper('.slider-remonte .swiper',{
           slidesPerView: 2.4
 
         },
-        1200: {
+        1440: {
           slidesPerView: 4,
           spaceBetween: 20,
 
