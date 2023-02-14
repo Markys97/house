@@ -188,11 +188,9 @@
     &__item{
         position: relative;
         transition: all 300ms;
-        padding: 22px 33px 21px 57px;
+       
         // cursor: pointer;
-        &:hover{
-            background: #6CAC3D;
-        }
+       
         &.active{
             .submenu{
                 display: block;
@@ -381,6 +379,12 @@
         }
         &__link{
             max-width:unset;
+        }
+        &__item{
+            padding: 22px 33px 21px 57px;
+            &:hover{
+                background: #6CAC3D;
+            }
         }
         
        

@@ -74,4 +74,55 @@ const swiper = new Swiper('.slider-remonte .swiper',{
 
 })
 
+// slider portfolio
+const swiperPortfolio = new Swiper('.item-tab__slider .swiper',{
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints:{
+      768:{
+        slidesPerView: 'auto',
+        centeredSlides:true
+      }
+    }
+})
+
+
+// tab script
+let tabTitle= [...document.querySelectorAll('.tab__title')];
+let tabContent= [...document.querySelectorAll('.tab__content')];
+
+tabTitle.forEach((item,index,arr)=>{
+ item.addEventListener('click',function(e){
+  let currentIdActive= this.dataset.tabindex;
+    arr.forEach(elt=> elt.classList.remove('active'))
+    this.classList.add('active')
+
+    tabContent.forEach((tab,index,arr)=>{
+      tab.classList.remove('active')
+
+      if(tab.dataset.tabindex === currentIdActive){
+        tab.classList.add('active')
+      }
+    })
+ })
+
+})
+
+let imgPreview =[...document.querySelectorAll('.house-detail__preview')]
+
+imgPreview.forEach((img,index,arr)=>{
+  img.addEventListener('click',function(e){
+    let activeImgSrc= this.querySelector('img').src;
+      arr.forEach(elt=>elt.classList.remove('active'))
+      this.classList.add('active')
+
+      document.querySelector('.house-detail__img img').src=activeImgSrc
+  })
+
+})
+// preview img porfolio
+
 

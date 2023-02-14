@@ -79,6 +79,98 @@ input:focus {
   border: 2px solid #F2F2F2;
 }
 
+.form__radio-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form__radio-label input {
+  display: none;
+}
+.form__radio-label input:checked + .form__radio-bull-wrapper {
+  border: 2px solid #2D4872;
+  background: #2D4872;
+}
+.form__radio-label input:checked + .form__radio-bull-wrapper .form__radio-bull {
+  border: 2px solid white;
+}
+.form__radio-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2D4872;
+}
+.form__radio-bull-wrapper {
+  width: 18px;
+  height: 18px;
+  background: #F2F2F2;
+  border: 2px solid #CCCCCC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: all 300ms;
+}
+.form__radio-bull {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms;
+}
+.form__input {
+  height: 40px;
+  display: inline-flex;
+  border: 1px solid #CCCCCC;
+}
+.form__input input {
+  display: inline-block;
+  padding: 0 13px;
+  width: 100%;
+}
+.form__input input::-moz-placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #595959;
+}
+.form__input input, .form__input input::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #595959;
+}
+.form__range input {
+  width: 100%;
+}
+.form__range input::-webkit-slider-thumb, .form__range input::-moz-range-thumb, .form__range input::-ms-thumb {
+  cursor: pointer;
+}
+.form__submit {
+  background: #6CAC3D;
+  border-radius: 4px;
+  height: 52px;
+  overflow: hidden;
+}
+.form__submit input {
+  background: inherit;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
 @media screen and (min-width: 768px) {
   .wrapper {
     max-width: 669px;
@@ -260,10 +352,6 @@ input:focus {
 .menu__item {
   position: relative;
   transition: all 300ms;
-  padding: 22px 33px 21px 57px;
-}
-.menu__item:hover {
-  background: #6CAC3D;
 }
 .menu__item.active .submenu {
   display: block;
@@ -416,6 +504,12 @@ input:focus {
   }
   .menu__link {
     max-width: unset;
+  }
+  .menu__item {
+    padding: 22px 33px 21px 57px;
+  }
+  .menu__item:hover {
+    background: #6CAC3D;
   }
 }
 .intro__content {
@@ -632,98 +726,6 @@ input:focus {
 .form-intro__send .form__input {
   max-width: 98%;
   margin-left: 6px;
-}
-
-.form__radio-label {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.form__radio-label input {
-  display: none;
-}
-.form__radio-label input:checked + .form__radio-bull-wrapper {
-  border: 2px solid #2D4872;
-  background: #2D4872;
-}
-.form__radio-label input:checked + .form__radio-bull-wrapper .form__radio-bull {
-  border: 2px solid white;
-}
-.form__radio-text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #2D4872;
-}
-.form__radio-bull-wrapper {
-  width: 18px;
-  height: 18px;
-  background: #F2F2F2;
-  border: 2px solid #CCCCCC;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: all 300ms;
-}
-.form__radio-bull {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  transition: all 300ms;
-}
-.form__input {
-  height: 40px;
-  display: inline-flex;
-  border: 1px solid #CCCCCC;
-}
-.form__input input {
-  display: inline-block;
-  padding: 0 13px;
-  width: 100%;
-}
-.form__input input::-moz-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #595959;
-}
-.form__input input, .form__input input::placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #595959;
-}
-.form__range input {
-  width: 100%;
-}
-.form__range input::-webkit-slider-thumb, .form__range input::-moz-range-thumb, .form__range input::-ms-thumb {
-  cursor: pointer;
-}
-.form__submit {
-  background: #6CAC3D;
-  border-radius: 4px;
-  height: 52px;
-  overflow: hidden;
-}
-.form__submit input {
-  background: inherit;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -1130,6 +1132,397 @@ input:focus {
     margin-bottom: 45px;
   }
   .remonte__slider .slider-pagination {
+    display: none;
+  }
+}
+.portfolio {
+  background: #F8F8F8;
+  padding: 34px 0 38px;
+}
+.portfolio__title {
+  margin-bottom: 26px;
+  text-align: center;
+}
+.portfolio .swiper-button-prev, .portfolio .swiper-button-next {
+  top: 45%;
+}
+.portfolio .swiper-button-prev::after, .portfolio .swiper-button-next::after {
+  font-size: 30px;
+  color: #000000;
+}
+
+.tab__header {
+  margin-bottom: 23px;
+}
+.tab__header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 5px;
+}
+.tab__title {
+  padding: 15px 17px 14px 18px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 4px;
+  background: #E6E6E6;
+  transition: all 300ms;
+  color: #595959;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.tab__title:hover {
+  background: #2D4872;
+  color: #FFFFFF;
+}
+.tab__title.active {
+  background: #2D4872;
+  color: #FFFFFF;
+}
+.tab__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.tab__content.active {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+.tab__content-wrapper {
+  position: relative;
+}
+.tab__content--empty {
+  height: 500px;
+  width: 100%;
+  background: #000;
+}
+.tab__content--empty:nth-child(2n) {
+  background: red;
+}
+
+.item-tab__radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 36px;
+  margin-bottom: 32px;
+}
+.item-tab__radios .form__radio-label {
+  gap: 7px;
+}
+.item-tab__radios .form__radio-text {
+  color: #595959;
+}
+.item-tab__radios input {
+  display: none;
+}
+.item-tab__radios input:checked ~ .form__radio-text {
+  font-weight: 700;
+}
+.item-tab__btn-wrapper {
+  margin-top: 28px;
+}
+.item-tab__btn-wrapper input {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.house-detail__images {
+  display: flex;
+  gap: 0 8px;
+  margin-bottom: 16px;
+}
+.house-detail__preview {
+  width: 65px;
+  height: 51px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 2px;
+}
+.house-detail__preview img {
+  max-width: none;
+  height: 100%;
+}
+.house-detail__preview:not(:last-child) {
+  margin-bottom: 7px;
+}
+.house-detail__preview.active {
+  border: 2px solid #595959;
+}
+.house-detail__img {
+  flex: 1 0 311px;
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.house-detail__img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.house-detail__body {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 22px 15px 15px;
+}
+.house-detail__info {
+  max-width: 242px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #595959;
+}
+.house-detail__info:not(:last-child) {
+  margin-bottom: 6px;
+}
+.house-detail__info--list {
+  display: block;
+  max-width: unset;
+}
+.house-detail__info-left {
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
+}
+.house-detail__info-icon {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+.house-detail__info-icon svg {
+  max-width: 100%;
+  height: auto;
+}
+.house-detail__info-title {
+  font-weight: 400;
+}
+.house-detail__info-data {
+  font-weight: 700;
+  color: #171616;
+  min-width: 94px;
+  text-align: left;
+}
+.house-detail__info-list {
+  padding-left: 44px;
+  margin-top: 6px;
+  list-style: disc;
+}
+.house-detail__info-list li {
+  font-weight: 400;
+  line-height: 18px;
+  color: #171616;
+}
+.house-detail__info-list li + li {
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .tab__title {
+    padding: 15px 15px 14px 18px;
+  }
+  .tab__header {
+    margin-bottom: 26px;
+  }
+  .tab__header-row {
+    gap: 6px 16px;
+  }
+  .portfolio {
+    padding: 34px 0 40px;
+  }
+  .portfolio__title {
+    margin-bottom: 38px;
+  }
+  .portfolio .swiper-button-prev, .portfolio .swiper-button-next {
+    top: 50%;
+  }
+  .portfolio .swiper {
+    max-width: 706px;
+    filter: drop-shadow(0px 4px 10px #DFDFDF);
+  }
+  .portfolio .swiper-button-prev {
+    left: 4px;
+  }
+  .house-detail {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 6px;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 0 29px;
+    padding: 17px 15px 15px;
+    justify-content: center;
+  }
+  .house-detail__images {
+    max-width: 282px;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-shrink: 0;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-bottom: unset;
+    justify-content: flex-end;
+  }
+  .house-detail__images-row {
+    display: flex;
+    gap: 0 8px;
+  }
+  .house-detail__preview:not(:last-child) {
+    margin-bottom: unset;
+  }
+  .house-detail__img {
+    flex: unset;
+    width: 282px;
+    height: 246px;
+  }
+  .house-detail__body {
+    border-radius: unset;
+    padding: unset;
+    padding-top: 39px;
+  }
+  .house-detail__info--list {
+    display: block;
+    max-width: unset;
+  }
+  .house-detail__info-left {
+    display: flex;
+    align-items: center;
+    gap: 0 7px;
+  }
+  .house-detail__info-data {
+    font-weight: 700;
+    color: #171616;
+    min-width: 94px;
+    text-align: left;
+  }
+  .item-tab__radios {
+    max-width: 600px;
+    gap: unset;
+    justify-content: space-between;
+    margin: 0 auto 27px;
+    flex-wrap: nowrap;
+  }
+  .item-tab__btn-wrapper {
+    display: flex;
+    margin-top: 28px;
+    justify-content: center;
+  }
+  .item-tab__btn-wrapper input {
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .portfolio {
+    padding: 56px 0 60px;
+  }
+  .portfolio__title {
+    margin-bottom: 70px;
+  }
+  .portfolio .slider__wrapper {
+    position: relative;
+  }
+  .portfolio .swiper {
+    max-width: 1200px;
+    filter: unset;
+  }
+  .portfolio .swiper-button-prev {
+    left: -41px;
+  }
+  .portfolio .swiper-button-next {
+    right: -41px;
+  }
+  .tab__title {
+    padding: 14px 70px 15px;
+  }
+  .tab__header {
+    margin-bottom: 34px;
+  }
+  .tab__header-row {
+    gap: 6px 4px;
+  }
+  .item-tab__radios {
+    max-width: unset;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 31px;
+    margin: 0 0 32px 0;
+  }
+  .item-tab__btn-wrapper {
+    margin-top: 31px;
+  }
+  .item-tab__btn-wrapper input {
+    padding: 13px 31px 14px;
+  }
+  .house-detail {
+    gap: unset;
+    padding: 0;
+    justify-content: unset;
+    background: unset;
+    background: white;
+  }
+  .house-detail__images {
+    max-width: unset;
+    height: unset;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: unset;
+    background: #F8F8F8;
+  }
+  .house-detail__images-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .house-detail__preview {
+    display: block;
+  }
+  .house-detail__preview:not(:last-child) {
+    margin-bottom: unset;
+  }
+  .house-detail__img {
+    width: 711px;
+    height: 405px;
+  }
+  .house-detail__body {
+    border-radius: unset;
+    padding: 56px 0 0 58px;
+  }
+  .house-detail__info--list {
+    display: block;
+  }
+  .house-detail__info-left {
+    display: flex;
+    align-items: center;
+    gap: 0 7px;
+  }
+  .house-detail__info-data {
+    font-weight: 700;
+    color: #171616;
+    min-width: 94px;
+    text-align: left;
+  }
+  .swiper-button {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
