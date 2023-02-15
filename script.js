@@ -50,16 +50,13 @@ inputRangeIntro.addEventListener('input',function(e){
 
 const swiper = new Swiper('.slider-remonte .swiper',{
     spaceBetween: 25,
+    slidesPerView: 'auto',
 
     pagination: {
         el: '.slider-remonte .slider-pagination',
         clickable:true
       },
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 'auto',
-        },
+      breakpoints: {      
         // when window width is >= 640px
         768: {
           slidesPerView: 2.4
@@ -88,6 +85,29 @@ const swiperPortfolio = new Swiper('.item-tab__slider .swiper',{
         centeredSlides:true
       }
     }
+})
+// slider stocks
+const swiperStock = new Swiper('.slider-stocks .swiper',{
+    // Navigation arrows
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    pagination: {
+      el: '.slider-stocks .slider-pagination',
+      clickable:true
+    },
+    breakpoints:{
+      768:{
+        slidesPerView:2.4,
+
+      },
+      1440: {
+        slidesPerView: 3,
+    
+
+      }
+    }
+   
+   
 })
 
 

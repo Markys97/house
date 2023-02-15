@@ -7,7 +7,7 @@
     }
     // border: 1px solid red;
     .swiper-button-prev,.swiper-button-next{
-        top: 45%;
+        top: 366px;
         &::after{
             font-size: 30px;
             color: #000000 ;
@@ -16,7 +16,9 @@
     .swiper-slide{
         min-width: 100%
     }
-    
+    .swiper{
+        min-width: 400px;
+    }
 }
 
 .tab{
@@ -153,6 +155,7 @@
         // border: 1px solid red;
         border-radius: 6px;
         img{
+            min-width: 100%;
             height: 100%;
             object-fit: cover;
         }
@@ -247,10 +250,8 @@
         // border: 1px solid red;
         .swiper-button-prev,.swiper-button-next{
             top: 50%;
-            // &::after{
-            //     font-size: 30px;
-            //     color: #000000 ;
-            // }
+            transform: translateY(-50%);
+            
         }
         .swiper{
             max-width: 706px;
