@@ -77,6 +77,7 @@ const swiper = new Swiper('.slider-remonte .swiper',{
 // slider portfolio
 const swiperPortfolio = new Swiper('.item-tab__slider .swiper',{
     // Navigation arrows
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

@@ -1150,6 +1150,9 @@ input:focus {
   font-size: 30px;
   color: #000000;
 }
+.portfolio .swiper-slide {
+  min-width: 100%;
+}
 
 .tab__header {
   margin-bottom: 23px;
