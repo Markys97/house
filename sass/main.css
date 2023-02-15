@@ -1157,9 +1157,6 @@ input:focus {
 .portfolio .swiper-slide {
   min-width: 100%;
 }
-.portfolio .swiper {
-  min-width: 400px;
-}
 
 .tab__header {
   margin-bottom: 23px;

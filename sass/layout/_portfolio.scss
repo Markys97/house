@@ -5,6 +5,7 @@
         margin-bottom: 26px;
         text-align: center;
     }
+
     // border: 1px solid red;
     .swiper-button-prev,.swiper-button-next{
         top: 366px;
@@ -13,12 +14,14 @@
             color: #000000 ;
         }
     }
+
     .swiper-slide{
         min-width: 100%
     }
-    .swiper{
-        min-width: 400px;
-    }
+
+    // .swiper{
+    //     min-width: 400px;
+    // }
 }
 
 .tab{
