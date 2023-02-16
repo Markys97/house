@@ -1,4 +1,5 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.esm.js";
 let menuElt= document.querySelector('.header__menu');
 let menuItem= [...document.querySelectorAll('.menu__item')]
 let subMenu= [...document.querySelectorAll('.submenu')];
@@ -109,6 +110,36 @@ const swiperStock = new Swiper('.slider-stocks .swiper',{
    
    
 })
+// slider comment
+const swiperComment = new Swiper('.slider-comment .swiper',{
+    // Navigation arrows
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    pagination: {
+      el: '.slider-comment .slider-pagination',
+      clickable:true
+    },
+  
+   
+   
+})
+// slider team
+const swiperTeam = new Swiper('.slider-team .swiper',{
+    // Navigation arrows
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    pagination: {
+      el: '.slider-team .slider-pagination',
+      clickable:true
+    },
+    navigation: {
+      nextEl: '.slider-team .swiper-button-next',
+      prevEl: '.slider-team .swiper-button-prev',
+    },
+  
+   
+   
+})
 
 
 // tab script
@@ -144,6 +175,47 @@ imgPreview.forEach((img,index,arr)=>{
   })
 
 })
-// preview img porfolio
+// remove slider on desktop
+window.addEventListener('resize',function(e){
+  if(this.screen.width>= 1440){
+    swiperComment.disable()
+  }else{
+    swiperComment.enable()
+  }
+})
+if(screen.width>= 1440){
+  swiperComment.disable()
+}else{
+  swiperComment.enable()
+}
+
+// show/hide preview comment video slide
+let slideComments=[...document.querySelectorAll('.comment__video')];
+slideComments.forEach(slideComment=>{
+  if(slideComment.querySelector('.item-video__preview')=== null){
+    slideComment.classList.add('no-preview')
+  }
+
+  // open video
+  slideComment.querySelector('.item-video__btn').addEventListener('click',function(e){
+
+    Fancybox.show(
+      // Array containing gallery items
+      [
+        // Gallery item
+        {
+          src:slideComment.dataset.urlvideo,
+          type: "iframe",
+          preload: false,
+        },
+      ]
+     
+    );
+  })
+})
+
+
+
+
 
 
