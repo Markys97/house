@@ -1,0 +1,285 @@
+.faq{
+    padding: 106px 0 47px;
+    &__content{
+        margin-bottom: 47px;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    &__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #171616;
+        margin-bottom: 42px;
+    }
+    &__item + &__item{
+        margin-top: 18px;
+    }
+    &__body{
+        flex-grow: 1;
+        width: 100%;
+    }
+    
+    &__bottom{
+        background: #6CAC3D;
+        padding: 31px 14px 39px ;
+        &-title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+            margin-bottom: 11px;
+            text-align: center;
+            
+        }
+        &-text{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        &-left{
+            margin-bottom: 23px;
+        }
+       
+    }
+    &__bottom-btn{
+        display: flex;
+        justify-content: center;
+        padding: 18px 0;
+        background: inherit;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
+
+.item-faq{
+    padding: 15px 12px 0 8px;
+    // border: 1px solid red;
+
+    &__row{
+        display: flex;
+        // align-items: center;
+        gap: 0 11px;
+    }
+    &__question{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #171616;
+        margin-bottom: 10px;
+        cursor: pointer;
+        
+    }
+    &__response{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color:#171616;
+        display: none;
+        padding-top: 7px;
+        border-top: 1px solid #C4C4C4;
+        
+    }
+    &__icon{
+        padding-top:8px ;
+        span{
+            display: block;
+            width: 27px;
+            height: 4px;
+            background: #CCCCCC;;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 4px;
+                height: 32px;
+                background: #CCCCCC;;
+            }
+        }
+    }
+    &.active{
+        background: #F2F2F2;
+        box-shadow: 0px 0px 10px rgba(215, 215, 215, 0.25);
+        padding: 15px 12px 17px 8px;
+        .item-faq__icon{
+            cursor: pointer;
+           span{
+            background: #6CAC3D;
+            width: 20px;
+            &::before{
+                display: none;
+            }
+           }
+        }
+        .item-faq__response{
+            display: block;
+
+        }
+        .item-faq__question{
+            color: #6CAC3D;
+        }
+    }
+}
+
+@media screen  and (min-width:768px){
+    .faq{
+        padding: 55px 0 ;
+        &__title{
+            margin-bottom: 19px;
+        }
+        &__text{
+            margin-bottom: 45px;
+        }
+        &__item + &__item{
+            margin-top: 10px;
+        }
+        &__bottom{
+            padding: 12px 0;
+            &-row{
+                max-width: 669px;
+                display: flex;
+                justify-content: center;
+                gap: 0 25px;
+                margin: 0 auto;
+            }
+            &-title{
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 2px;
+                text-align: left;
+                
+            }
+            &-text{
+                font-size: 13px;
+                line-height: 15px;
+                text-align: left;
+            }
+            &-left{
+                margin-bottom: unset;
+            }
+            &-right{
+                flex-shrink: 0;
+            }
+           
+        }
+        &__bottom-btn{
+            display: inline-flex;
+            justify-content: center;
+            
+            padding: 16px 18px 16px 19px;
+        }
+    }
+
+    .item-faq{
+        padding: 15px 12px 0 8px;
+        &__row{
+            display: flex;
+            // align-items: center;
+            gap: 0 11px;
+        }
+        &__question{
+            margin-bottom: 16px; 
+        }
+        &__response{
+            padding-top: 10px;
+        }
+       
+        &.active{
+            padding: 15px 18px 22px 8px;
+        
+        }
+    }
+}
+@media screen  and (min-width:1440px){
+    .faq{
+        &__item + &__item{
+            margin-top: 10px;
+        }
+        &__bottom{
+            padding: 33px 0 32px;
+            &-row{
+                max-width: 1200px;
+                justify-content: unset;
+                align-items: center;
+                gap: 0 122px;
+                margin: 0 auto;
+            }
+            &-title{
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 2px;
+                text-align: left;
+                
+            }
+            &-text{
+                font-size: 16px;
+                line-height: 19px;
+                max-width:570px;
+            }
+            &-left{
+                margin-bottom: unset;
+                display: flex;
+                gap: 0 77px;
+                h3{
+                   flex-shrink: 0;
+                }
+            }
+            &-right{
+                flex-shrink: 0;
+            }
+           
+        }
+        &__bottom-btn{
+            display: inline-flex;
+            justify-content: center;
+            padding: 16px 37px 16px 38px;
+            border-radius: 31px;
+        }
+    }
+
+    .item-faq{
+        &__row{
+            gap: 0 33px;
+        }
+        &__question{
+            margin-bottom: 14px; 
+        }
+        &__response{
+            padding-top: 10px;
+        }
+       
+        &.active{
+            padding: 15px 81px 20px 8px;
+        
+        }
+    }
+
+   
+}

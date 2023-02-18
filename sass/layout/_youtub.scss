@@ -1,0 +1,114 @@
+.youtub{
+    padding:47px 0 71px;
+    &__title{
+        text-align: center;
+        margin-bottom: 31px;
+    }
+    &__video-mobile{
+        // width: 383px;
+        height: 226px;
+        margin-bottom: 15px;
+
+        .item-video{
+            height: 100%;
+            width: 100%;
+        }
+        
+    }
+    .swiper-pagination-bullet{
+        &::before{
+            width: 80%;
+            height: 80%;
+        }
+        &-active{
+            &::before{
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+
+    &__video{
+        width: 135px;
+        height: 80px;
+    
+        .item-video__btn{
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+
+    .slider-pagination{
+        margin-top: 40px;
+    }
+
+    .item-video__body,.item-video__wrapper{
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .youtub{
+        padding:6 7px 0 79px;
+        &__title{
+
+            margin-bottom: 35px;
+        }
+        &__video-mobile{
+            display: none;
+        }
+        .swiper-pagination-bullet{
+            &::before{
+                width: 80%;
+                height: 80%;
+            }
+            &-active{
+                &::before{
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+
+        .swiper-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 226px auto;
+            gap: 20px;
+        }
+    
+        &__video{
+            width: 100%!important;
+            height: 100%!important;
+            .item-video__btn{
+                width: 60px;
+                height: 60px;
+            }
+    
+        }
+    
+        
+    
+        .item-video__body,.item-video__wrapper{
+            height: 100%;
+        }
+    }
+}
+@media screen and (min-width:1440px) {
+    .youtub{
+        padding:56px 0 88px;
+        &__title{
+            margin-bottom: 49px;
+        }
+       
+    
+        .swiper-wrapper{
+
+            grid-template-columns: repeat(3,1fr);
+            gap: 19px;
+        }
+    
+
+    }
+}

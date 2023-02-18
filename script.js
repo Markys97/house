@@ -4,6 +4,7 @@ let menuElt= document.querySelector('.header__menu');
 let menuItem= [...document.querySelectorAll('.menu__item')]
 let subMenu= [...document.querySelectorAll('.submenu')];
 
+
 // show top position of  header submenu
 menuItem.forEach((item,index,arr)=>{
     item.addEventListener('mousemove',function(e){
@@ -182,6 +183,19 @@ const swiperMaster = new Swiper('.slider-master .swiper',{
 })
 
 
+// slider team
+const swiperYoutub = new Swiper('.slider-youtub .swiper',{
+    // Navigation arrows
+    slidesPerView: 3,
+    spaceBetween: 11,
+    pagination: {
+      el: '.slider-youtub .slider-pagination',
+      clickable:true
+    },
+   
+})
+
+
 // tab script
 let tabTitle= [...document.querySelectorAll('.tab__title')];
 let tabContent= [...document.querySelectorAll('.tab__content')];
@@ -215,19 +229,44 @@ imgPreview.forEach((img,index,arr)=>{
   })
 
 })
+const breakpoint= getComputedStyle(document.body,'::before').content
 // remove slider on desktop
 window.addEventListener('resize',function(e){
-  if(this.screen.width>= 1440){
+  if(breakpoint === '"large"'){
     swiperComment.disable()
   }else{
     swiperComment.enable()
   }
+
+  if(window.screen.width >= 768){
+
+    swiperYoutub.disable()
+
+
+  }else{
+    swiperYoutub.enable()
+
+  }
 })
-if(screen.width>= 1440){
+
+
+
+if(breakpoint === '"large"'){
   swiperComment.disable()
 }else{
   swiperComment.enable()
 }
+if(window.screen.width >= 768){
+
+  swiperYoutub.disable()
+
+
+
+}else{
+  swiperYoutub.enable()
+
+}
+
 
 // show/hide preview comment video slide
 let slideComments=[...document.querySelectorAll('.item-video')];
@@ -253,6 +292,42 @@ slideComments.forEach(slideComment=>{
     );
   })
 })
+
+
+// open answer
+
+let questions= [...document.querySelectorAll('.item-faq__question')];
+let closeBtnItemFaqs= [...document.querySelectorAll('.item-faq__icon')]
+
+questions.forEach((question,index,arr)=>{
+  question.addEventListener('click',function(e){
+    let itemFaq= question.closest('.item-faq');
+  
+      arr.forEach(item=>{
+        // item.closest('.item-faq').classList.remove('active')
+        if(item.closest('.item-faq').classList.contains('active')){
+          if(item.closest('.item-faq')!== this){
+             item.closest('.item-faq').classList.remove('active')
+           
+          }
+        }
+      })
+      this.closest('.item-faq').classList.toggle('active')
+
+  })
+})
+
+
+closeBtnItemFaqs.forEach(closeBtnItemFaq=> {
+  closeBtnItemFaq.addEventListener('click',function(e){
+    if(this.closest('.item-faq').classList.contains('active')){
+      this.closest('.item-faq').classList.remove('active')
+    }
+  })
+})
+
+
+
 
 
 

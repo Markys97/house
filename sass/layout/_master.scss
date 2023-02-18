@@ -18,7 +18,7 @@
     &__video{
         height: 214px;
         margin-top: 36px;
-        .item-video__body{
+        .item-video__body,.item-video__wrapper{
             height: 100%;
         }
     }
@@ -78,32 +78,6 @@
         }
         
     }
-    // .swiper-slide{
-    //     height: 312px;
-       
-    //     &.master__img{
-
-    //         width: 253px;
-    //         align-items: flex-end;
-    //         margin-top: auto;
-           
-    //         img{
-    //             transition: all 300ms;
-    //             height: 268px;
-    //         }
-    //     }
-    //     &-active{
-    //         &.master__img{
-    //             width: 533px;
-    //             border: 1px solid unset;
-    //             img{
-    //                 height: 100%;
-    //             }
-                
-    //         }
-    //     }
-       
-    // }
 }
 
 @media screen  and (min-width:768px){
@@ -118,7 +92,7 @@
         }
         &__video{
             width: 297px;
-            height: 214px;
+            height: unset;
             margin-top: unset;
             flex-shrink: 0;
         }
