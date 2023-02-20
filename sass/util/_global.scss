@@ -154,6 +154,7 @@
 .menu-mobile-active{
     position: relative;
     overflow: hidden;
+    height: 200%;
     &::before{
         display: block;
         content: '';
