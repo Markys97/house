@@ -487,6 +487,9 @@ input:focus {
   .header__menu {
     display: block;
   }
+  .menu__item {
+    padding-bottom: 10px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .header__top {
