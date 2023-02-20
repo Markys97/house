@@ -1,5 +1,5 @@
 .faq{
-    padding: 106px 0 47px;
+    padding: 106px 0 0;
     &__content{
         margin-bottom: 47px;
     }
@@ -150,7 +150,7 @@
 
 @media screen  and (min-width:768px){
     .faq{
-        padding: 55px 0 ;
+        padding: 55px 0 0;
         &__title{
             margin-bottom: 19px;
         }

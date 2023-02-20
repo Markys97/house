@@ -151,7 +151,22 @@
     }
 }
 
+.menu-mobile-active{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(32, 10, 10, 0.55);
+        z-index: 1000;
+    }
 
+}
 @media screen and (min-width:768px){
     .wrapper{
         max-width: 669px;
@@ -165,6 +180,12 @@
     body::before{
         content: 'middle';
         visibility: hidden;
+    }
+    .menu-mobile-active{
+        overflow: unset;
+        &::before{
+            display: none;
+        }
     }
 }
 

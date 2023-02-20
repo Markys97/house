@@ -1,0 +1,128 @@
+.menu-mobile{
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    top: 0;
+    right: -150%;
+    z-index: 10000;
+    transition: all 300ms;
+    &.open{
+        right: 0;
+    }
+    
+
+    &-active{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(32, 10, 10, 0.55);
+        z-index: 1000;
+    }
+
+    &__wrapper-btn{
+        display: flex;
+        flex-direction: column;
+        gap: 11px 0;
+        margin-bottom: 38px;
+    }
+    .menu__list{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: unset;
+      .menu__item{
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+      }
+        .menu__link{
+            max-width: unset;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            span{
+                min-width: 163px;
+                padding-left: 6px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        .menu__item--mobile{
+            padding-left: 30px;
+            a{
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+    .menu__icon{
+        transform: rotate(90deg);
+    }
+    &__row{
+        display: flex;
+        height: 100%;
+    }
+    &__close-btn{
+        height: fit-content;
+        // border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__body{
+        background: white;
+       padding: 45px 19px 35px 25px;
+       flex-grow: 1;
+       filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+     
+       
+    }
+    &__content{
+        max-height: 90vh;
+        overflow: auto;
+    }
+    .submenu{
+        display: none;
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        padding: 13px 8px;
+    }
+
+    .menu-top__list{
+        flex-direction: column;
+        align-items: unset;
+        padding-left: 30px;
+        margin-top: 31px;
+        li+li{
+            margin-top: 20px;
+        }
+    }
+
+    &__contact{
+        // padding-left: 47px;
+        // margin-top: 31px;
+        margin: 31px auto 0;
+        width: fit-content;
+        .phone__number{
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 5px;
+        }
+        .contact__time{
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .menu-mobile{
+        display: none;
+    }
+}

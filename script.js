@@ -327,6 +327,32 @@ closeBtnItemFaqs.forEach(closeBtnItemFaq=> {
 })
 
 
+// menu mobile
+
+let burgerbtn= document.querySelector('.header__burger');
+let menuMobile = document.querySelector('.menu-mobile')
+let closeMenuMobileBtn= document.querySelector('.menu-mobile__close-btn')
+// open menu mobile
+burgerbtn.addEventListener('click',function(e){
+  menuMobile.classList.add('open')
+  document.body.classList.add('menu-mobile-active')
+})
+
+// close menu mobile
+closeMenuMobileBtn.addEventListener('click',function(e){
+  menuMobile.classList.remove('open')
+  document.body.classList.remove('menu-mobile-active')
+})
+
+window.addEventListener('resize',function(e){
+  if(this.screen.width >=768){
+    menuMobile.classList.remove('open')
+    document.body.classList.remove('menu-mobile-active')
+  }
+})
+
+
+
 
 
 
